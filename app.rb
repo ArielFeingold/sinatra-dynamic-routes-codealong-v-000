@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-require 'pry'
+
 
 class App < Sinatra::Base
 
@@ -23,7 +23,7 @@ class App < Sinatra::Base
   get '/multiply/:num1/:num2' do
     @num1 = params[:num1]
     @num2 = params[:num2]
-    binding.pry
+    @num1.to_i * @num2.to_i
   end
 
 end
